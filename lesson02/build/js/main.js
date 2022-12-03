@@ -6,5 +6,7 @@ let album;
 myName = 'Itamar';
 meaningOfLife = 42;
 isLoading = true;
-album = 'Van Halen';
-album = true;
+album = 1984;
+const sum = (a, b) => {
+    return a + b;
+};
