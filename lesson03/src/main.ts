@@ -32,3 +32,11 @@ myObj = [];
 console.log(typeof myObj);
 myObj = bands;
 myObj = {};
+
+const exampleObj = {
+  prop1: 'Dave',
+  prop2: true
+};
+
+exampleObj.prop1 = 'Jon';
+exampleObj.prop2 = false;
