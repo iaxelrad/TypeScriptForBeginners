@@ -11,4 +11,5 @@ const sum = (a, b) => {
     return a + b;
 };
 let postId;
-let isActive; //not limited to two types
+let isActive;
+let re = /\w+/g;
