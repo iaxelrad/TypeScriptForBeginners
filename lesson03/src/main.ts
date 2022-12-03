@@ -42,8 +42,8 @@ exampleObj.prop1 = 'Jon';
 exampleObj.prop2 = false;
 
 interface Guitarist {
-  name: string,
-  active?: boolean,
+  name?: string,
+  active: boolean,
   albums: (string | number)[]
 };
 
@@ -55,11 +55,15 @@ let evh: Guitarist = {
 
 let jp: Guitarist = {
   name: 'Jimmy',
+  active: true,
   albums: ['I', 'II', 'IV']
 };
 
 const greetGuitarist = (guitarist: Guitarist) => {
-  return `Hello ${guitarist.name}!`;
+  if(guitarist.name) {
+    return `Hello ${guitarist.name.toUpperCase()}!`;
+  }
+  return 'Hello!';
 };
 
 console.log(greetGuitarist(jp));
