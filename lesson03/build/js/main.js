@@ -35,6 +35,5 @@ let evh = {
 };
 let jp = {
     name: 'Jimmy',
-    active: true,
     albums: ['I', 'II', 'IV']
 };

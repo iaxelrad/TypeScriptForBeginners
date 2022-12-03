@@ -43,7 +43,7 @@ exampleObj.prop2 = false;
 
 type Guitarist = {
   name: string,
-  active: boolean,
+  active?: boolean,
   albums: (string | number)[]
 };
 
@@ -55,7 +55,6 @@ let evh: Guitarist = {
 
 let jp: Guitarist = {
   name: 'Jimmy',
-  active: true,
   albums: ['I', 'II', 'IV']
 };
 
