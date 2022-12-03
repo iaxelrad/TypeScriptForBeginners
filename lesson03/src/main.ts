@@ -17,3 +17,11 @@ let test = [];
 let bands: string[] = [];
 bands.push('Tom');
 
+// Tuple
+let myTuple: [string, number, boolean] = ['Dave', 42, true];
+
+let mixed = ['John', 1, false];
+
+mixed = myTuple;
+
+myTuple[1] = 42;

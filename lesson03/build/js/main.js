@@ -11,3 +11,8 @@ guitars = stringArr; //TS allows this assignment of a string array to a string |
 let test = [];
 let bands = [];
 bands.push('Tom');
+// Tuple
+let myTuple = ['Dave', 42, true];
+let mixed = ['John', 1, false];
+mixed = myTuple;
+myTuple[1] = 42;
