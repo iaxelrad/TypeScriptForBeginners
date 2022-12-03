@@ -8,3 +8,6 @@ guitars[0] = 1984;
 guitars.unshift('Jim');
 stringArr = guitars; //TS doesn't allow this assignment of a string | number union array to string array
 guitars = stringArr; //TS allows this assignment of a string array to a string | number union array
+let test = [];
+let bands = [];
+bands.push('Tom');
