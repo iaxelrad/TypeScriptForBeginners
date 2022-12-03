@@ -16,3 +16,9 @@ let myTuple = ['Dave', 42, true];
 let mixed = ['John', 1, false];
 mixed = myTuple;
 myTuple[1] = 42;
+// Object
+let myObj;
+myObj = [];
+console.log(typeof myObj);
+myObj = bands;
+myObj = {};

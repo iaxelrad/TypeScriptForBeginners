@@ -25,3 +25,10 @@ let mixed = ['John', 1, false];
 mixed = myTuple;
 
 myTuple[1] = 42;
+
+// Object
+let myObj: object;
+myObj = [];
+console.log(typeof myObj);
+myObj = bands;
+myObj = {};
