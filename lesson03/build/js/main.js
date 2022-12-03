@@ -28,3 +28,8 @@ const exampleObj = {
 };
 exampleObj.prop1 = 'Jon';
 exampleObj.prop2 = false;
+let evh = {
+    name: 'Eddie',
+    active: false,
+    albums: [1984, 5150, 'OU812']
+};
