@@ -1,4 +1,7 @@
-// let myName: string = 'Dave';
-let myName = 'Dave';
+let myName: string;
+let meaningOfLife: number;
+let isLoading: boolean;
 
-myName = 42;
+myName = 'Itamar';
+meaningOfLife = 42;
+isLoading = true;
