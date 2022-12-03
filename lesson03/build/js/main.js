@@ -28,6 +28,7 @@ const exampleObj = {
 };
 exampleObj.prop1 = 'Jon';
 exampleObj.prop2 = false;
+;
 let evh = {
     name: 'Eddie',
     active: false,

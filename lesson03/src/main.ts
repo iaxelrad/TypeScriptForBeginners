@@ -41,7 +41,7 @@ const exampleObj = {
 exampleObj.prop1 = 'Jon';
 exampleObj.prop2 = false;
 
-type Guitarist = {
+interface Guitarist {
   name: string,
   active?: boolean,
   albums: (string | number)[]
