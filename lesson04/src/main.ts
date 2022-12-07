@@ -32,3 +32,11 @@ logMsg(add(2,3));
 let subtract = function(c: number, d: number): number {
   return c - d;
 };
+
+type mathFunction = (a: number, b: number) => number;
+
+let multiply: mathFunction = function(c: number, d: number) {
+  return c * d;
+};
+
+logMsg(multiply(2,2));
