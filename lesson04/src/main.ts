@@ -22,3 +22,10 @@ const add = (a: number, b: number): number => {
   return a + b
 };
 
+const logMsg = (msg: any): void => {
+  console.log(msg);
+};
+
+logMsg('Hello!');
+logMsg(add(2,3));
+
