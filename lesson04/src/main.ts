@@ -33,13 +33,21 @@ let subtract = function(c: number, d: number): number {
   return c - d;
 };
 
-// type mathFunction = (a: number, b: number) => number;
-interface mathFunction { 
-  (a: number, b: number): number
-};
+type mathFunction = (a: number, b: number) => number;
+// interface mathFunction { 
+//   (a: number, b: number): number
+// };
 
 let multiply: mathFunction = function(c: number, d: number) {
   return c * d;
 };
 
 logMsg(multiply(2,2));
+
+//Optional Parameters
+const addAll = (a: number, b: number, c?: number): number => {
+  if(typeof c !== 'undefined') {
+    return a + b + c;
+  }
+  return a + b;
+};
