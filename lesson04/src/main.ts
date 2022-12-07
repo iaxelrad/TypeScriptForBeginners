@@ -81,8 +81,14 @@ const infinite = () => {
   };
 };
 
+//custom type guard
+const isNumber = (value: any): boolean => {
+  return typeof value === 'number' ? true: false;
+}
+
+//use if the never type
 const numberOrString = (value: number | string): string => {
   if(typeof value === 'string') return 'string';
-  if(typeof value === 'number') return 'number';
+  if(isNumber(value)) return 'number';
   return createError('this should never happen');
 };
