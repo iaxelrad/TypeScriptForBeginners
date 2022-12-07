@@ -1,6 +1,13 @@
+//Type Aliases
+type stringOrNumber = string | number;
 
-interface Guitarist {
+type stringOrNumberArray = (string | number)[]
+
+type Guitarist = {
   name?: string,
   active: boolean,
-  albums: (string | number)[]
+  albums: stringOrNumberArray
 };
+
+type UserId = stringOrNumber;
+
