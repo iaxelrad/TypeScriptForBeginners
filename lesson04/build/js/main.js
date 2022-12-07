@@ -42,3 +42,22 @@ const total = (a, ...nums) => {
     return a + nums.reduce((prev, curr) => prev + curr);
 };
 logMsg(total(10, 2, 3));
+const createError = (errMsg) => {
+    throw new Error(errMsg);
+};
+const infinite = () => {
+    let i = 2;
+    while (true) {
+        i++;
+        if (i > 100)
+            break;
+    }
+    ;
+};
+const numberOrString = (value) => {
+    if (typeof value === 'string')
+        return 'string';
+    if (typeof value === 'number')
+        return 'number';
+    return createError('this should never happen');
+};

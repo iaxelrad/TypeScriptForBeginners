@@ -68,3 +68,21 @@ const total = (a: number, ...nums: number[]): number => {
 };
 
 logMsg(total(10 ,2, 3));
+
+const createError = (errMsg: string) => {
+  throw new Error(errMsg);
+};
+
+const infinite = () => {
+  let i: number = 2;
+  while(true) {
+    i++
+    if(i > 100) break;
+  };
+};
+
+const numberOrString = (value: number | string): string => {
+  if(typeof value === 'string') return 'string';
+  if(typeof value === 'number') return 'number';
+  return createError('this should never happen');
+};
