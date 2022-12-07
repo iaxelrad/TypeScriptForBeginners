@@ -37,3 +37,8 @@ logMsg(addAll(2, 3, 2));
 logMsg(addAll(2, 3));
 logMsg(sumAll(2, 3));
 logMsg(sumAll(undefined, 3));
+//Rest Parameters
+const total = (a, ...nums) => {
+    return a + nums.reduce((prev, curr) => prev + curr);
+};
+logMsg(total(10, 2, 3));
