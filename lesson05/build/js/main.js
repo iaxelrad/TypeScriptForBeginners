@@ -13,3 +13,5 @@ const addOrConcat = (a, b, c) => {
 let myVal = addOrConcat(2, 2, 'concat');
 // Be careful! TS sees no problem - but a string is returned
 let nextVal = addOrConcat(2, 2, 'concat');
+10;
+10;

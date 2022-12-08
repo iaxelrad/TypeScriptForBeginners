@@ -19,3 +19,6 @@ let myVal: string = addOrConcat(2,2, 'concat') as string;
 
 // Be careful! TS sees no problem - but a string is returned
 let nextVal: number = addOrConcat(2,2, 'concat') as number;
+
+10 as string
+(10 as unknown) as string; 
