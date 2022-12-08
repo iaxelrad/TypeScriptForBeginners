@@ -26,6 +26,7 @@ let nextVal: number = addOrConcat(2,2, 'concat') as number;
 // The DOM
 const img = document.querySelector('img')!;
 const myImg = document.getElementById('#img') as HTMLImageElement;
+const nextImg = <HTMLImageElement>document.getElementById('#img') as HTMLImageElement;
 
 img.src
 myImg.src
