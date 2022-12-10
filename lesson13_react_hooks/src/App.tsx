@@ -1,4 +1,10 @@
-import { useState, useEffect } from 'react';
+import {
+  useState,
+  useEffect,
+  useCallback,
+  MouseEvent,
+  KeyboardEvent,
+} from 'react';
 
 interface User {
   id: number;
@@ -15,7 +21,19 @@ function App() {
     return () => console.log('unmounting');
   }, [users]);
 
-  return <div className="App"></div>;
+  const addTwo = useCallback(
+    (
+      e: MouseEvent<HTMLButtonElement> | KeyboardEvent<HTMLButtonElement>
+    ): void => setCount(prev => prev + 1),
+    []
+  );
+
+  return (
+    <div className="App">
+      <h1>{count}</h1>
+      <button onClick={addTwo}>Add</button>
+    </div>
+  );
 }
 
 export default App;
