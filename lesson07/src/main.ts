@@ -1,7 +1,7 @@
 // Index Signatures
 
 interface TransactionObj {
-  [index: string]: number;
+  readonly [index: string]: number;
 }
 // interface TransactionObj {
 //   Pizza: number;
@@ -31,3 +31,5 @@ const todaysNet = (transactions: TransactionObj): number => {
 };
 
 console.log(todaysNet(todaysTransactions));
+
+// todaysTransactions.Pizza = 40;

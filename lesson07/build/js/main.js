@@ -22,3 +22,4 @@ const todaysNet = (transactions) => {
     return total;
 };
 console.log(todaysNet(todaysTransactions));
+// todaysTransactions.Pizza = 40;
