@@ -102,3 +102,12 @@ type NewAssign = ReturnType<typeof createNewAssign>;
 
 const tsAssign: NewAssign = createNewAssign('Utility Types', 100);
 console.log(tsAssign);
+
+// Parameters
+
+type AssignParams = Parameters<typeof createNewAssign>; // A Tuple type
+
+const assignArgs: AssignParams = ['Generics', 100];
+
+const tsAssign2: NewAssign = createNewAssign(...assignArgs);
+console.log(tsAssign2);
