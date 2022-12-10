@@ -19,3 +19,9 @@ const todaysNet = (transactions) => {
 console.log(todaysNet(todaysTransactions));
 // todaysTransactions.Pizza = 40;
 console.log(todaysTransactions['Dave']);
+const student = {
+    name: 'Doug',
+    GPA: 3.5,
+    classes: [100, 200],
+};
+console.log(student.test);
