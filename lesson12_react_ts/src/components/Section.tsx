@@ -1,6 +1,14 @@
-import React from 'react';
+import { ReactNode } from 'react';
 
-export const Section: React.FC<{ title: string }> = ({ children, title }) => {
+type SectionProps = {
+  title?: string;
+  children: ReactNode;
+};
+
+export const Section = ({
+  children,
+  title = 'My Subheading',
+}: SectionProps) => {
   return (
     <section>
       <h2>{title}</h2>
