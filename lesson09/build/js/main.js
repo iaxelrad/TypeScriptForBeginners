@@ -31,3 +31,11 @@ const gradeData = {
     Sarah: { assign1: 85, assign2: 93 },
     Kelly: { assign1: 76, assign2: 15 },
 };
+const score = {
+    studentId: 'k123',
+    grade: 85,
+};
+const preview = {
+    studentId: 'k123',
+    title: 'Final Project',
+};
