@@ -43,3 +43,28 @@ const Sarah = new WebDev('Mac', 'Sarah', 'Lofi', 25);
 console.log(Sarah.getLang());
 // console.log(Sarah.age);
 // console.log(Sarah.lang);
+////////////////////////////////////////////////////////////////
+
+interface Musician {
+  name: string;
+  instrument: string;
+  play(action: string): string;
+}
+
+class Guitarist implements Musician {
+  name: string;
+  instrument: string;
+
+  constructor(name: string, instrument: string) {
+    this.name = name;
+    this.instrument = instrument;
+  }
+
+  play(action: string) {
+    return `${this.name} ${action} the ${this.instrument}`;
+  }
+}
+
+const Page = new Guitarist('Jimmy', 'guitar');
+console.log(Page.play('strums'));
+///////////////////////////////////////////////////////////////////////////
