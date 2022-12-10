@@ -4,12 +4,22 @@ import {
   useCallback,
   MouseEvent,
   KeyboardEvent,
+  useMemo,
 } from 'react';
 
 interface User {
   id: number;
   username: string;
 }
+
+type fibFunc = (n: number) => number;
+
+const fib: fibFunc = (n: number) => {
+  if (n < 2) return n;
+  return fib(n - 1) + fib(n - 2);
+};
+
+const myNum: number = 37;
 
 function App() {
   const [count, setCount] = useState<number>(0);
@@ -28,10 +38,13 @@ function App() {
     []
   );
 
+  const result = useMemo<number>(() => fib(myNum), [myNum]);
+
   return (
     <div className="App">
       <h1>{count}</h1>
       <button onClick={addTwo}>Add</button>
+      <h2>{result}</h2>
     </div>
   );
 }
