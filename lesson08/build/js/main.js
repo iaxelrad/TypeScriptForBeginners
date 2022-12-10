@@ -41,3 +41,9 @@ const checkBoolValue = (arg) => {
     }
     return { value: arg, is: !!arg };
 };
+const processUser = (user) => {
+    //process the user with logic
+    return user;
+};
+console.log(processUser({ id: 1, name: 'Dave' }));
+console.log(processUser({ name: 'Dave' }));

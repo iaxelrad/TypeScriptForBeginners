@@ -50,3 +50,15 @@ const checkBoolValue = <T>(arg: T): BoolCheck<T> => {
   }
   return { value: arg, is: !!arg };
 };
+
+interface HasID {
+  id: number;
+}
+
+const processUser = <T extends HasID>(user: T): T => {
+  //process the user with logic
+  return user;
+};
+
+console.log(processUser({ id: 1, name: 'Dave' }));
+console.log(processUser({ name: 'Dave' }));
