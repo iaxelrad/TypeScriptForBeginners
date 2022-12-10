@@ -40,7 +40,7 @@ function App() {
   const addTwo = useCallback(
     (
       e: MouseEvent<HTMLButtonElement> | KeyboardEvent<HTMLButtonElement>
-    ): void => setCount(prev => prev + 1),
+    ): void => setCount(prev => prev + 2),
     []
   );
 
