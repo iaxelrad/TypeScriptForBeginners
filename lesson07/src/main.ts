@@ -33,3 +33,5 @@ const todaysNet = (transactions: TransactionObj): number => {
 console.log(todaysNet(todaysTransactions));
 
 // todaysTransactions.Pizza = 40;
+
+console.log(todaysTransactions['Dave']);
