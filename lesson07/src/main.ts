@@ -1,10 +1,13 @@
 // Index Signatures
 
 interface TransactionObj {
-  Pizza: number;
-  Books: number;
-  Job: number;
+  [index: string]: number;
 }
+// interface TransactionObj {
+//   Pizza: number;
+//   Books: number;
+//   Job: number;
+// }
 
 const todaysTransactions: TransactionObj = {
   Pizza: -10,

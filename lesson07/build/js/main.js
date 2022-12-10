@@ -1,5 +1,10 @@
 "use strict";
 // Index Signatures
+// interface TransactionObj {
+//   Pizza: number;
+//   Books: number;
+//   Job: number;
+// }
 const todaysTransactions = {
     Pizza: -10,
     Books: -5,
