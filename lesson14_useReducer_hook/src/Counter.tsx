@@ -1,7 +1,18 @@
-import { ReactNode, useState } from 'react';
+import { ReactNode, useState, useReducer } from 'react';
 
 type ChildrenType = {
   children: (num: number) => ReactNode;
+};
+
+const initState = { count: 0 };
+
+const enum REDUCER_ACTION_TYPE {
+  INCREMENT,
+  DECREMENT,
+}
+
+type ReducerAction = {
+  type: REDUCER_ACTION_TYPE;
 };
 
 const Counter = ({ children }: ChildrenType) => {
