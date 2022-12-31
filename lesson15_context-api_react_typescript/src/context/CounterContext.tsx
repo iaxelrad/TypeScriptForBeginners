@@ -1,11 +1,11 @@
-import { ChangeEvent, createContext, ReactElement, useReducer } from "react";
+import { ChangeEvent, createContext, ReactElement, useCallback, useReducer } from "react";
 
 type StateType = {
   count: number;
   text: string;
 }
 
-const initState: StateType = { count: 0, text: '' };
+export const initState: StateType = { count: 0, text: '' };
 
 const enum REDUCER_ACTION_TYPE {
   INCREMENT,
@@ -37,14 +37,14 @@ const reducer = (
 const useCounterContext = (initState: StateType) => {
   const [state, dispatch] = useReducer(reducer, initState);
 
-  const increment = () => dispatch({ type: REDUCER_ACTION_TYPE.INCREMENT });
-  const decrement = () => dispatch({ type: REDUCER_ACTION_TYPE.DECREMENT });
-  const handleTextInput = (e: ChangeEvent<HTMLInputElement>) => {
+  const increment = useCallback(() => dispatch({ type: REDUCER_ACTION_TYPE.INCREMENT }), []);
+  const decrement = useCallback(() => dispatch({ type: REDUCER_ACTION_TYPE.DECREMENT }), []);
+  const handleTextInput = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     dispatch({
       type: REDUCER_ACTION_TYPE.NEW_INPUT,
       payload: e.target.value,
     });
-  };
+  }, []);
   
   return { state, increment, decrement, handleTextInput };
 }
