@@ -20,6 +20,26 @@ const Product = ({
     .href; //Will work with Vite & create-react-app
   console.log(img);
 
-  return <div>Product</div>;
+  const onAddToCart = () =>
+    dispatch({ type: REDUCER_ACTIONS.ADD, payload: { ...product, qty: 1 } });
+
+  const itemInCart = inCart ? ' → Item in Cart: ✔️' : null;
+
+  const content = (
+    <article className="product">
+      <h3>{product.name}</h3>
+      <img src={img} alt={product.name} className="product__img" />
+      <p>
+        {new Intl.NumberFormat('en-US', {
+          style: 'currency',
+          currency: 'USD',
+        }).format(product.price)}
+        {itemInCart}
+        <button onClick={onAddToCart}>Add to Cart</button>
+      </p>
+    </article>
+  );
+
+  return content;
 };
 export default Product;
