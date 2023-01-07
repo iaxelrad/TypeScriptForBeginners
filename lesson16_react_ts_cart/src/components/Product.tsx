@@ -15,6 +15,11 @@ const Product = ({
   REDUCER_ACTIONS,
   inCart,
 }: PropsType): ReactElement => {
+  // const img: string = require(`../images/${product.sku}.jpg`); // Won't work with Vite
+  const img: string = new URL(`../images/${product.sku}.jpg`, import.meta.url)
+    .href; //Will work with Vite & create-react-app
+  console.log(img);
+
   return <div>Product</div>;
 };
 export default Product;
